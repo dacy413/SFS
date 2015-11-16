@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple File Storage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src= "bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+
+<div class="container" ng-app="SFSApp" ng-controller="showFiles">
+  <h2>Simple File Storage</h2>
+  <p>You can upload and download file with it.</p>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>FileName</th>
+        <th>CreateTime</th>
+        <th>Description</th>
+        <th>Md5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a.log</td>
+        <td>2012.12.12</td>
+        <td>john@example.com</td>
+        <td> </td>
+      </tr>
+      <tr ng-repeat="file in files">
+        <td>{{ file.name }}</td>
+        <td>{{ file.create_time }}</td>
+        <td>{{ file.desc }}</td>
+        <td>{{ file.md5 }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script>
+var app = angular.module('SFSApp', []);
+app.controller('showFiles', function($scope, $http) {
+    // $http.get("/getfiles")
+    // .success(function (response) {$scope.files = response.records;});
+   $scope.files = [{"name":"test","create_time":"2012.12.12","desc":"XXXX","md5":"asdwqeqq"}];
+});
+</script>
+</body>
+</html>
