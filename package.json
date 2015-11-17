@@ -1,0 +1,22 @@
+{
+  "name": "sfs",
+  "version": "1.0.0",
+  "description": "simple file storage",
+  "main": "app.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dacy413/SFS.git"
+  },
+  "author": "dacy413@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dacy413/SFS/issues"
+  },
+  "homepage": "https://github.com/dacy413/SFS#readme",
+  "dependencies": {
+    "koa": "^1.1.2"
+  }
+}
